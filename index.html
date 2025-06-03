@@ -12,28 +12,29 @@
       background: #f6f6f6;
       color: #333;
     }
-    .banner {
-      background: url('banner.png') no-repeat center center/cover;
+    .hero {
+      background: url('banner.jpg') no-repeat center center/cover;
       height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      color: white;
       text-align: center;
+      color: white;
       padding: 0 20px;
     }
-    .banner h1 {
+    .hero h1 {
       font-size: 3rem;
       margin-bottom: 10px;
       text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
     }
-    .banner h2 {
+    .hero h2 {
       font-size: 1.5rem;
       margin-bottom: 30px;
+      max-width: 600px;
       text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
     }
-    .banner button {
+    .hero button {
       padding: 12px 24px;
       font-size: 1rem;
       background: #4b8a8c;
@@ -42,12 +43,12 @@
       border-radius: 5px;
       cursor: pointer;
     }
-    .banner button:hover {
+    .hero button:hover {
       background: #3d7071;
     }
     section {
-      max-width: 800px;
-      margin: 40px auto;
+      max-width: 900px;
+      margin: 60px auto;
       padding: 0 20px;
     }
     .features, .steps {
@@ -61,6 +62,32 @@
       border-radius: 10px;
       box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     }
+    .preview-section {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      background: #fff;
+      padding: 40px 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .preview-section .text {
+      flex: 1 1 400px;
+      padding-right: 20px;
+    }
+    .preview-section .text h2 {
+      margin-bottom: 20px;
+    }
+    .preview-section .text p, .preview-section .text li {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    .preview-section img {
+      flex: 1 1 300px;
+      max-width: 100%;
+      border-radius: 10px;
+    }
     .cta {
       background: #fff;
       text-align: center;
@@ -71,6 +98,7 @@
       padding: 10px;
       width: 60%;
       font-size: 1rem;
+      margin-top: 10px;
     }
     button {
       padding: 10px 20px;
@@ -87,10 +115,9 @@
   </style>
 </head>
 <body>
-  <header class="banner">
-    <img src="logo.png" alt="Stillnest Logo" style="max-width: 120px; margin-bottom: 20px;" />
+  <header class="hero">
     <h1>Trust the quiet. Know the light.</h1>
-    <h2>Stillnest helps you measure how a home really feels — using only your smartphone.</h2>
+    <h2>Stillnest helps you understand how a home really feels — by measuring natural light, noise, and sirens with just your smartphone.</h2>
     <button onclick="document.getElementById('signup').scrollIntoView({behavior: 'smooth'});">Get early access</button>
   </header>
 
@@ -109,16 +136,18 @@
       <p>Buyers see a simple verified summary of brightness and quietness.</p>
     </div>
   </section>
-  <section class="app-preview" style="text-align: center; padding: 40px 20px; background: #fff;">
-    <h2>See Stillnest in Action</h2>
-    <p>Here’s a glimpse of the Stillnest app and how it helps you measure your space.</p>
-    <img src="your-image.jpg" alt="Stillnest App Preview" style="max-width: 100%; height: auto; margin-top: 20px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-  </section>
-  <section class="features">
-    <h2>What you get</h2>
-    <div>🌞 Hourly light score with time-of-day breakdown</div>
-    <div>🔊 Average sound levels + siren alerts</div>
-    <div>📄 Stillnest Verified badge + shareable listing report</div>
+
+  <section class="preview-section">
+    <div class="text">
+      <h2>See Stillnest in Action</h2>
+      <p>Here’s a glimpse of the <strong>Stillnest</strong> app and how it helps you measure your space.</p>
+      <ol>
+        <li><strong>Place your phone on a windowsill</strong> → Stillnest quietly tracks ambient light and sound</li>
+        <li><strong>Let it listen and observe</strong> → We record light changes, sirens, and more</li>
+        <li><strong>Get a report</strong> → Share an ambient light and quiet score for your listing</li>
+      </ol>
+    </div>
+    <img src="app-preview.jpg" alt="Stillnest App Preview">
   </section>
 
   <section class="cta" id="signup">
@@ -127,11 +156,11 @@
     <form action="https://formspree.io/f/xyzjydbn" method="POST">
       <label>
         Your email:<br>
-        <input type="email" name="email" required style="margin-top:5px; margin-bottom:15px;"><br>
+        <input type="email" name="email" required><br>
       </label>
       <label>
         Your message:<br>
-        <textarea name="message" rows="4" style="margin-top:5px;"></textarea><br><br>
+        <textarea name="message" rows="4"></textarea><br><br>
       </label>
       <button type="submit">Send</button>
     </form>
