@@ -64,6 +64,7 @@
     }
     .preview-section {
       display: flex;
+      flex-direction: row;
       align-items: center;
       justify-content: space-between;
       flex-wrap: wrap;
@@ -86,6 +87,8 @@
     .preview-section img {
       flex: 1 1 300px;
       max-width: 100%;
+      height: auto;
+      margin-top: 20px;
       border-radius: 10px;
     }
     .cta {
@@ -111,6 +114,14 @@
     }
     button:hover {
       background: #3d7071;
+    }
+    @media (max-width: 768px) {
+      .preview-section {
+        flex-direction: column;
+      }
+      .preview-section .text {
+        padding-right: 0;
+      }
     }
   </style>
 </head>
