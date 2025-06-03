@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Stillnest – Trust the Quiet</title>
+  <link rel="icon" type="image/png" href="logo.png" />
   <style>
     body {
       margin: 0;
@@ -15,6 +16,10 @@
       background: #fff;
       padding: 60px 20px;
       text-align: center;
+    }
+    header img {
+      max-width: 120px;
+      margin-bottom: 20px;
     }
     h1 {
       font-size: 2.5rem;
@@ -47,10 +52,9 @@
       padding: 40px 20px;
       margin: 40px auto;
     }
-    input[type="email"] {
+    input[type="email"], textarea {
       padding: 10px;
       width: 60%;
-      margin-right: 10px;
       font-size: 1rem;
     }
     button {
@@ -69,6 +73,7 @@
 </head>
 <body>
   <header>
+    <img src="logo.png" alt="Stillnest Logo" />
     <h1>Trust the quiet. Know the light.</h1>
     <h2>Stillnest helps you measure how a home really feels — using only your smartphone.</h2>
     <button onclick="document.getElementById('signup').scrollIntoView({behavior: 'smooth'});">Get early access</button>
@@ -100,9 +105,16 @@
   <section class="cta" id="signup">
     <h2>Be the first to try Stillnest</h2>
     <p>Join the early access list and help shape the future of home listings.</p>
-    <form>
-      <input type="email" placeholder="Your email" required />
-      <button type="submit">Get early access</button>
+    <form action="https://formspree.io/f/xyzjydbn" method="POST">
+      <label>
+        Your email:<br>
+        <input type="email" name="email" required style="margin-top:5px; margin-bottom:15px;"><br>
+      </label>
+      <label>
+        Your message:<br>
+        <textarea name="message" rows="4" style="margin-top:5px;"></textarea><br><br>
+      </label>
+      <button type="submit">Send</button>
     </form>
   </section>
 </body>
