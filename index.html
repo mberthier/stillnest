@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stillnest – Trust the Quiet</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f6f6f6;
+      color: #333;
+    }
+    header {
+      background: #fff;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+    h2 {
+      font-size: 1.5rem;
+      margin: 0 0 30px;
+      color: #555;
+    }
+    section {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .features, .steps {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .features div, .steps div {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+    .cta {
+      background: #fff;
+      text-align: center;
+      padding: 40px 20px;
+      margin: 40px auto;
+    }
+    input[type="email"] {
+      padding: 10px;
+      width: 60%;
+      margin-right: 10px;
+      font-size: 1rem;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 1rem;
+      background: #4b8a8c;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #3d7071;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Trust the quiet. Know the light.</h1>
+    <h2>Stillnest helps you measure how a home really feels — using only your smartphone.</h2>
+    <button onclick="document.getElementById('signup').scrollIntoView({behavior: 'smooth'});">Get early access</button>
+  </header>
+
+  <section class="steps">
+    <h2>How it works</h2>
+    <div>
+      <strong>1. Place your phone on a windowsill</strong>
+      <p>Stillnest quietly tracks natural light and ambient noise.</p>
+    </div>
+    <div>
+      <strong>2. Let it observe for a few hours</strong>
+      <p>We analyze light changes, average decibels, and siren events.</p>
+    </div>
+    <div>
+      <strong>3. Share your report</strong>
+      <p>Buyers see a simple verified summary of brightness and quietness.</p>
+    </div>
+  </section>
+
+  <section class="features">
+    <h2>What you get</h2>
+    <div>🌞 Hourly light score with time-of-day breakdown</div>
+    <div>🔊 Average sound levels + siren alerts</div>
+    <div>📄 Stillnest Verified badge + shareable listing report</div>
+  </section>
+
+  <section class="cta" id="signup">
+    <h2>Be the first to try Stillnest</h2>
+    <p>Join the early access list and help shape the future of home listings.</p>
+    <form>
+      <input type="email" placeholder="Your email" required />
+      <button type="submit">Get early access</button>
+    </form>
+  </section>
+</body>
+</html>
